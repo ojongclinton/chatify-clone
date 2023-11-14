@@ -25,6 +25,7 @@ import EditProfile from "./EditProfile";
 import Fade from "@material-ui/core/Fade";
 import Snackbar from "@material-ui/core/Snackbar";
 import CloseIcon from "@material-ui/icons/Close";
+import logo from "../Assets/logo.png";
 
 const drawerWidth = 240;
 
@@ -186,9 +187,20 @@ function Application(props) {
   const drawer = userDetails && (
     <div>
       <Toolbar className={classes.sideToolBar}>
-        <Typography variant="h6" className={classes.sideToolBarText}>
-          CHATIFY
-        </Typography>
+        <div
+          style={{
+            display: "flex",
+              gap:"10px",
+            alignItems: "center",
+          }}
+        >
+          <Typography variant="h6" className={classes.sideToolBarText}>
+            CHATIFY -
+          </Typography>
+          <div>
+            <img src={logo} alt="logo" height="30" />
+          </div>
+        </div>
       </Toolbar>
       <Divider />
       <Grid className={classes.avatarGrid}>
